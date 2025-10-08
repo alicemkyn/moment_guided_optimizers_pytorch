@@ -20,7 +20,7 @@ improve convergence under noisy or sparse gradient conditions.
 ## Setup
 1. Clone or unzip the project:
    ```bash
-   git clone https://github.com/alicemkoyun/moment_guided_optimizers_pytorch.git
+   git clone https://github.com/alicemkyn/moment_guided_optimizers_pytorch.git
    cd moment_guided_optimizers_pytorch
    pip install -r requirements.txt
 
