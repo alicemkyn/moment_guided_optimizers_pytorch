@@ -33,8 +33,9 @@ python experiments/cifar10_train.py
 python experiments/imdb_train.py
 python experiments/beta_sweep.py
 python experiments/plot_results.py
+```
 
-##  Citation
+## Citation
 If you use this code or findings in academic work, please cite:
 
 @article{koyun2025moment,
