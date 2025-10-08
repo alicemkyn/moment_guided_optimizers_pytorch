@@ -25,12 +25,14 @@ improve convergence under noisy or sparse gradient conditions.
    pip install -r requirements.txt
 
 ## Run Experiments
+You can reproduce the results by running the following experiments:
+
+```bash
 python experiments/mnist_train.py
 python experiments/cifar10_train.py
 python experiments/imdb_train.py
 python experiments/beta_sweep.py
 python experiments/plot_results.py
-
 
 ##  Citation
 If you use this code or findings in academic work, please cite:
