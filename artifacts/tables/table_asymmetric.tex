@@ -1,0 +1,20 @@
+% --- Table 3 (Asymmetric noise) ---
+\begin{table}[!ht]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6.0pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Asymmetric (class-dependent) label noise at $\eta=0.4$ on CIFAR-10 / ResNet-18, matched learning rate, $n=5$. Test accuracy (\%) at best validation.}
+\label{tab:asym}
+\begin{tabular}{lc}
+\toprule
+\textbf{Optimizer} & \textbf{Test Acc (\%)} \\
+\midrule
+Adam ($L_2$)                 & $76.00 \pm 0.48$ \\
+AdamW                        & $73.70 \pm 0.86$ \\
+AdamW + GCE                  & $71.94 \pm 0.42$ \\
+MGO-SC (shrink)              & $69.89 \pm 0.90$ \\
+\textbf{MGO-SC (mean-pres.)} & $\mathbf{74.40 \pm 0.51}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
