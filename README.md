@@ -40,6 +40,16 @@ What is not established:
 - The ResNet stem and CIFAR normalization. The two trainers disagree (CIFAR stem and std `0.2470, 0.2435, 0.2616` versus stock `resnet18` and std `0.2023, 0.1994, 0.2010`). The paper does not choose between them.
 - A reproduction of the reported accuracies. The numbers below were not retrained.
 
+## New reference implementation
+
+`reconstruction/` is a new runnable implementation of Algorithm 1, added 2026-11-08. It is not either archived source, and its logs are not the archived CSVs. Equation (7) is implemented as a per-tensor mean. The squared-norm claim is not repeated: mean 1 does not preserve `||s ⊙ u||^2`.
+
+Open protocol choices stay on the command line. The decision matrix, the headline command, and the CPU step measurements are in `reconstruction/PROTOCOL.md`. CIFAR-10 will not start unless `--accept-assumptions` is set. A one-epoch synthetic smoke test is:
+
+```bash
+python -m reconstruction.train --dataset synthetic --epochs 1 --max-steps 2 --opt paired --label-noise 0.4 --out-dir reconstruction_runs/smoke
+```
+
 ## Run the October 2025 scripts
 
 These commands run the short 2025 scripts only. They do not reproduce the ResNet-18 tables.

@@ -41,3 +41,15 @@ The published defaults include r_min = 0.2. The two-coordinate example above is 
 Keep the statement that the mean-preserving gate has mean 1 and that a bounded gate does not change the O(sqrt(T)) order. Delete the claim that mean 1 by itself prevents inflation of the quadratic term. State the inflation factor through ||s||_∞, which is at most 1/r_min when r_i ∈ [r_min, 1].
 
 The accuracy tables are a separate question. This note does not change any reported accuracy.
+
+## Proposed qualification for the gamma = 0 baseline
+
+Table II says gamma = 0 disables the gate and equals AdamW, and it prints 73.49 ± 0.54. Table I's AdamW entry at the same noise rate, learning rate, and n = 8 is 73.61 ± 0.20. Those values come from two different CSVs, and the per-seed accuracies are not the same. The +1.5 point ablation gap is the gap against the gamma = 0 file. The +1.4 point headline gap is the gap against the AdamW file.
+
+A corrected sentence would say that gamma = 0 removes the gate, and that the archived gamma = 0 runs are not the archived AdamW runs. The new reference code does make gamma = 0 with decoupled weight decay match `torch.optim.AdamW` on a synthetic tensor. That match describes the new code. It does not rewrite the archived logs.
+
+## Proposed qualification for the timing sentence
+
+The paper says Adam and AdamW take about 9.1 s/epoch and MGO-SC about 14.6 s/epoch, and it attributes the gap to per-step logging synchronization. In the archived summaries, AdamW at n = 8 averages 9.06 s/epoch. MGO-SC rows that do not point at an epoch log, including some mean-preserving rows, sit near 14.6 s. The n = 8 mean-preserving rows that do point at epoch logs average about 36.3 s. One 14.6 s figure does not describe those logged headline runs.
+
+The new harness records `train_seconds`, `eval_seconds`, and `epoch_time_s`, and it moves gate statistics to the host once per epoch. Those fields are the measurements for a new run. They are not a correction of the archived clocks.
