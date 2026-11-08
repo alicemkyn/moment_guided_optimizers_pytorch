@@ -1,0 +1,9 @@
+tag,seed,best_epoch,best_val,test_acc_at_best_val,mean_epoch_time_s,epoch_csv
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,1,28,0.7508,0.7508,14.51811802883943,
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,2,29,0.7502,0.7481,14.605959072709084,
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,3,28,0.7624,0.7405,14.657399525245031,
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,4,29,0.7598,0.7422,14.594887261589369,
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,5,28,0.7482,0.7517,14.594785322745642,
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,6,26,0.7618,0.7466,14.714658111333847,
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,7,28,0.746,0.7433,15.142851223548254,
+cifar10_resnet18_mgosc_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.3_rmin0.2_bcs0_E50_n8_gmrenorm,8,28,0.7602,0.7481,14.669318268696466,

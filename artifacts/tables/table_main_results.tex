@@ -1,0 +1,43 @@
+% --- Table 1 (Main Results) ---
+\begin{table}[!ht]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{5.0pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Main results on CIFAR-10 / ResNet-18 under symmetric label noise, at a \emph{matched} learning rate ($3\times10^{-4}$ for all Adam-family methods; SGD at $0.1$). Test accuracy (\%) at best-validation checkpoint, mean\,$\pm$\,std over $n$ seeds. MGO-SC (mean-preserving) is the proposed method; its controlled baseline is AdamW.}
+\label{tab:main_results}
+\begin{tabular}{llc}
+\toprule
+\textbf{Noise} & \textbf{Optimizer} & \textbf{Test Acc (\%)} \\
+\midrule
+\multirow{7}{*}{$\eta=0.0$}
+ & Adam ($L_2$)            & $83.03 \pm 0.41$ \\
+ & AdamW                   & $82.06 \pm 0.21$ \\
+ & AMSGrad                 & $82.86 \pm 0.28$ \\
+ & SGD+momentum            & $86.61 \pm 0.10$ \\
+ & AdamW + GCE             & $80.46 \pm 0.15$ \\
+ & MGO-SC (shrink)         & $79.05 \pm 0.17$ \\
+ & \textbf{MGO-SC (mean-pres.)} & $\mathbf{82.87 \pm 0.30}$ \\
+\midrule
+\multirow{7}{*}{$\eta=0.2$}
+ & Adam ($L_2$)            & $79.52 \pm 0.41$ \\
+ & AdamW                   & $78.22 \pm 0.48$ \\
+ & AMSGrad                 & $78.41 \pm 0.68$ \\
+ & SGD+momentum            & $83.06 \pm 0.20$ \\
+ & AdamW + GCE             & $79.03 \pm 0.46$ \\
+ & MGO-SC (shrink)         & $74.54 \pm 0.36$ \\
+ & \textbf{MGO-SC (mean-pres.)} & $\mathbf{78.96 \pm 0.73}$ \\
+\midrule
+\multirow{7}{*}{$\eta=0.4$}
+ & Adam ($L_2$)            & $76.00 \pm 0.24$ \\
+ & AdamW                   & $73.61 \pm 0.20$ \\
+ & AMSGrad                 & $74.23 \pm 0.81$ \\
+ & SGD+momentum            & $78.43 \pm 0.43$ \\
+ & AdamW + GCE             & $77.09 \pm 0.35$ \\
+ & MGO-SC (shrink)         & $70.06 \pm 0.25$ \\
+ & \textbf{MGO-SC (mean-pres.)} & $\mathbf{74.97 \pm 0.29}$ \\
+\bottomrule
+\end{tabular}
+\vspace{2pt}\\
+{\footnotesize \textit{Seeds:} $n=3$ (clean), $n=5$ ($\eta=0.2$, and baselines at $\eta=0.4$), $n=8$ (AdamW and MGO-SC at $\eta=0.4$).}
+\end{table}

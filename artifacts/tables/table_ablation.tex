@@ -1,0 +1,19 @@
+% --- Table 2 (Gate-mode ablation) ---
+\begin{table}[!ht]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{6.0pt}
+\renewcommand{\arraystretch}{1.15}
+\caption{Gate ablation on CIFAR-10 / ResNet-18 at $\eta=0.4$, \emph{fixed} learning rate $3\times10^{-4}$, $n=8$. Test accuracy (\%) at best validation. $\gamma=0$ disables the gate and equals AdamW. The shrink gate degrades monotonically with $\gamma$; the mean-preserving gate improves with $\gamma$, isolating the benefit as trust reallocation rather than step-size reduction.}
+\label{tab:ablation}
+\begin{tabular}{lcc}
+\toprule
+\textbf{$\gamma$} & \textbf{Shrink gate (\%)} & \textbf{Mean-preserving (\%)} \\
+\midrule
+$0.0$ (=AdamW) & $73.49 \pm 0.54$ & $73.49 \pm 0.54$ \\
+$0.3$          & $71.35 \pm 0.51$ & $74.64 \pm 0.41$ \\
+$0.5$          & $70.06 \pm 0.25$ & $\mathbf{74.97 \pm 0.29}$ \\
+$0.7$          & $68.69 \pm 0.58$ & $75.04 \pm 0.42$ \\
+\bottomrule
+\end{tabular}
+\end{table}

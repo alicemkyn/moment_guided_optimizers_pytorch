@@ -1,0 +1,6 @@
+tag,seed,best_epoch,best_val,test_acc_at_best_val,mean_epoch_time_s,epoch_csv
+cifar10_resnet18_amsgrad_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.5_rmin0.2_bcs0_E50_n5,1,30,0.7516,0.7517,9.335203995307287,
+cifar10_resnet18_amsgrad_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.5_rmin0.2_bcs0_E50_n5,2,27,0.7494,0.7391,9.349806254108747,
+cifar10_resnet18_amsgrad_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.5_rmin0.2_bcs0_E50_n5,3,36,0.7548,0.7405,9.397789791226387,
+cifar10_resnet18_amsgrad_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.5_rmin0.2_bcs0_E50_n5,4,34,0.7524,0.7315,9.290103693803152,
+cifar10_resnet18_amsgrad_lossce_ntsymmetric_lr0.0003_wd0.0005_bs128_noise0.4_betaS0.9_g0.5_rmin0.2_bcs0_E50_n5,5,30,0.7472,0.7489,9.221092393000921,
